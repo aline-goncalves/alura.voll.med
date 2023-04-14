@@ -1,5 +1,7 @@
 package med.voll.api.controller;
 
+import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import med.voll.api.doctor.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +13,8 @@ public class DoctorController {
     private DoctorRepository repository;
 
     @PostMapping
-    public String creatDoctor(@RequestBody DoctorRecord data){
+    @Transactional
+    public String creatDoctor(@RequestBody @Valid DoctorRecord data){
         repository.save(new Doctor(data));
         System.out.println(data);
         return "Doctor created successfully!";
