@@ -25,4 +25,26 @@ public class Address {
         this.complement = address.complement();
         this.number = address.number();
     }
+
+    public void updateAddress(AddressRecord address) {
+        if(address.street() != null) {
+            this.street = address.street();
+        }
+
+        if(address.neighborhood() != null) {
+            this.neighborhood = address.neighborhood();
+        }
+
+        if(address.cep() != null) {
+            this.cep = address.cep();
+        }
+
+        if(address.city() != null) {
+            this.city = address.city();
+        }
+
+        if(address.state() != null) {
+            this.state = address.state();
+        }
+    }
 }
