@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee1b7909-9758-4454-8c01-98087d8e3912" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/db/migration/V1__create_table_doctors.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/controller/PatientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/patient/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/patient/PatientRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/patient/PatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/resources/db/migration/V2__create_table_patients.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/med/voll/api/address/AddressRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/address/AddressRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/med/voll/api/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/controller/DoctorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/med/voll/api/doctor/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/doctor/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/med/voll/api/doctor/DoctorRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/doctor/DoctorRecord.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +41,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Record" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -89,6 +89,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="med.voll.api.patient" />
       <recent name="med.voll.api.address" />
       <recent name="med.voll.api.doctor" />
       <recent name="med.voll.api.enum" />
@@ -96,6 +97,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\aline\OneDrive\Documentos\alura.voll.med\api\src\main\resources\db\migration" />
       <recent name="C:\Users\aline\OneDrive\Documentos\alura.voll.med\api\src\main\resources\db.migration" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="med.voll.api.controller" />
     </key>
   </component>
   <component name="RunManager">
