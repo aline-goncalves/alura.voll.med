@@ -4,7 +4,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import med.voll.api.address.AddressRecord;
 
-public record DoctorRecord(
+public record DoctorCreateRecord(
         @NotBlank
         String name,
         @NotBlank @Email
