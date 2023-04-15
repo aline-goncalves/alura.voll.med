@@ -2,6 +2,7 @@ package med.voll.api.address;
 
 import jakarta.persistence.Embeddable;
 import lombok.*;
+import med.voll.api.utils.ValidateValues;
 
 @Embeddable
 @Getter
@@ -27,24 +28,11 @@ public class Address {
     }
 
     public void updateAddress(AddressRecord address) {
-        if(address.street() != null) {
-            this.street = address.street();
-        }
-
-        if(address.neighborhood() != null) {
-            this.neighborhood = address.neighborhood();
-        }
-
-        if(address.cep() != null) {
-            this.cep = address.cep();
-        }
-
-        if(address.city() != null) {
-            this.city = address.city();
-        }
-
-        if(address.state() != null) {
-            this.state = address.state();
-        }
+        ValidateValues validateValues = new ValidateValues();
+        this.street = validateValues.returnValidString(address.street(), this.street);
+        this.neighborhood = validateValues.returnValidString(address.neighborhood(), this.neighborhood);
+        this.cep = validateValues.returnValidString(address.cep(), this.cep);
+        this.city = validateValues.returnValidString(address.city(), this.city);
+        this.state = validateValues.returnValidString(address.state(), this.state);
     }
 }
