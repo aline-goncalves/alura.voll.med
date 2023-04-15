@@ -3,6 +3,7 @@ package med.voll.api.patient;
 import jakarta.persistence.*;
 import lombok.*;
 import med.voll.api.address.Address;
+import med.voll.api.utils.ValidateValues;
 
 @Table(name = "patients")
 @Entity(name = "Patient")
@@ -31,17 +32,10 @@ public class Patient {
     }
 
     public void updatePatient(PatientUpdateRecord data) {
-        if(data.name() != null){
-            this.name = data.name();
-        }
-
-        if(data.phone() != null){
-            this.phone = data.phone();
-        }
-
-        if(data.address() != null){
-            this.address.updateAddress(data.address());
-        }
+        ValidateValues validateValues = new ValidateValues();
+        this.name = validateValues.returnValidString(data.name(), this.name);
+        this.phone = validateValues.returnValidString(data.phone(), this.phone);
+        this.address = validateValues.returnValidAddress(data.address(), this.address);
     }
 
     public void deletePatient(){
